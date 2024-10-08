@@ -1,0 +1,234 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background-color: #282c34;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Toolbar migliorata */
+.toolbar {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-left: 6px solid #3498db;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.toolbar .controls {
+    display: flex;
+    align-items: center;
+}
+
+.toolbar .controls label {
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.toolbar .controls input[type="color"] {
+    padding: 0;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    height: 36px;
+    width: 60px;
+    margin-right: 30px;
+}
+
+/* Slider Styling */
+input[type="range"] {
+    -webkit-appearance: none; /* Disabilita lo stile predefinito */
+    width: 200px; /* Occupa il 100% della larghezza disponibile */
+    height: 8px; /* Altezza del cursore */
+    background: #3498db; /* Colore della traccia */
+    border-radius: 5px; /* Arrotonda gli angoli della traccia */
+    outline: none; /* Rimuove il contorno */
+    opacity: 0.9; /* Leggera opacità */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Aumenta l'opacità al passaggio del mouse */
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+/* Personalizza la traccia del cursore */
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    background: #3498db; /* Colore personalizzato */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Personalizza il thumb del cursore */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px; /* Larghezza del thumb */
+    height: 18px; /* Altezza del thumb */
+    background: #2ecc71; /* Colore del thumb */
+    border-radius: 50%; /* Arrotonda completamente il thumb */
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Aggiunge ombra */
+    transition: background-color 0.3s ease;
+}
+
+/* Aggiunge un effetto hover al thumb */
+input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: #27ae60; /* Cambia il colore del thumb al passaggio del mouse */
+}
+
+/* Stile per Firefox */
+input[type="range"]::-moz-range-track {
+    background: #3498db;
+    border-radius: 5px;
+    height: 8px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #2ecc71;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Per Internet Explorer */
+input[type="range"]::-ms-track {
+    width: 100%;
+    height: 8px;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower {
+    background: #3498db;
+}
+
+input[type="range"]::-ms-fill-upper {
+    background: #3498db;
+}
+
+input[type="range"]::-ms-thumb {
+    width: 18px;
+    height: 18px;
+    background: #2ecc71;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Pulsanti */
+.btn-group {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    min-width: 100px;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Pulsanti singoli */
+.btn-primary {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2980b9, #3498db);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+    border: none;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #7f8c8d, #95a5a6);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #27ae60, #229954);
+    border: none;
+    color: white;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #229954, #27ae60);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    border: none;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+    .toolbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+}
